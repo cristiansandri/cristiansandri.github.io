@@ -174,8 +174,9 @@ h1 {
     margin-bottom: 5px;
 }
 
-.contatos{
+.contato{
     padding: 6rem 2rem;
+    margin-bottom: 30px;
 }
 
 .contatos-titulo{
@@ -202,6 +203,7 @@ h1 {
     color: var(--claro);
     border: 1px solid var(var(--vidro));
     outline: none;
+    resize: vertical;
 }
 
 .campo-form:focus {
