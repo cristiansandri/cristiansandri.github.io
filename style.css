@@ -137,16 +137,26 @@ h1 {
 
 .btn-carrossel{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #e2e8f0;
-    color: var(--escuro);
-    border:none;
-    font-size: 30px;
+    top: 40%;
+    transform: translateY(0%);
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--claro);
+    font-size: 28px;
     padding: 1px 10px;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
+    margin: 40px;
+    transition: all 0.3s ease;
+}
+
+.btn-carrossel:hover{
+    scale: 120%;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--claro);
 }
 
 .antes{
@@ -172,21 +182,41 @@ h1 {
 
 .projetos-caixa {
     display: flex;
-    gap: 2rem;
-    overflow: hidden;
+    position: relative;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 20px;
     scroll-behavior: smooth;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+    mask-image: linear-gradient(to left, transparent 0%, black 2%, black 98%, transparent 100%);
+    cursor: grab;
+    touch-action: pan-x;
+    scrollbar-width: none;
 }
+
+.projetos-caixa * {
+    pointer-events: none;
+}
+
+.projetos-caixa.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
 
 .projetos-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     border: 1p solid var(--vidro);
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     transition: all 0.5s ease;
-    cursor: pointer;
     min-width: calc(33.333% - 1.3rem);
+    user-select: none;
 }
 
 @media (max-width: 900px){
