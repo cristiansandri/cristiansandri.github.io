@@ -226,12 +226,17 @@ h1 {
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 
 
 
 /* Formulário de contato */
 .contatos {
+=======
+.contato{
+>>>>>>> d4f494bde31966bb1a822336a5643387c4bb14c7
     padding: 6rem 2rem;
+    margin-bottom: 30px;
 }
 
 .contatos-titulo {
@@ -258,6 +263,7 @@ h1 {
     color: var(--claro);
     border: 1px solid var(var(--vidro));
     outline: none;
+    resize: vertical;
 }
 
 .campo-form:focus {
