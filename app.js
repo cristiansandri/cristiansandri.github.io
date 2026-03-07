@@ -2,7 +2,6 @@
 // Fazer o card levar para um link externo nos sites e projetos ou abrir popup nos de design 
 
 
-
 // ==================== AUTOPLAY CARROSSEL ==================== //
 let indiceAtual = 0;
 let intervaloAutoPlay;
@@ -39,23 +38,23 @@ function iniciarAutoPlay() {
     }, 5000);
 }
 
-
 // ==================== PAUSA AO ARRASTAR ==================== //
 const projetosCaixa = document.querySelector(".projetos-caixa");
 
 let arrastando = false;
 let posicaoInicialX;
 let scrollInicial;
+let deslocamentoTotal = 0;
 
 projetosCaixa.addEventListener("pointerdown", (evento) => {
-    clearInterval(intervaloAutoPlay);
-
     arrastando = true;
     projetosCaixa.classList.add("dragging");
-    projetosCaixa.setPointerCapture(evento.pointerId);
 
     posicaoInicialX = evento.pageX;
     scrollInicial = projetosCaixa.scrollLeft;
+    deslocamentoTotal = 0; 
+    
+    clearInterval(intervaloAutoPlay);
 });
 
 projetosCaixa.addEventListener("pointermove", (evento) => {
@@ -64,6 +63,8 @@ projetosCaixa.addEventListener("pointermove", (evento) => {
     evento.preventDefault();
 
     const posicaoAtualX = evento.pageX;
+    deslocamentoTotal = Math.abs(posicaoAtualX - posicaoInicialX); 
+
     const deslocamento = (posicaoAtualX - posicaoInicialX) * 1.5;
 
     projetosCaixa.scrollLeft = scrollInicial - deslocamento;
@@ -81,6 +82,42 @@ projetosCaixa.addEventListener("pointercancel", () => {
     arrastando = false;
     projetosCaixa.classList.remove("dragging");
     iniciarAutoPlay();
+});
+
+// ======== PERMITIR CLIQUE APENAS SE NÃO HOUVE ARRASTO =========== //
+
+
+projetosCaixa.addEventListener("click", (evento) =>{
+        if (deslocamentoTotal > THRESHOLD_ARRASTO) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, {capture: true});
+
+
+
+// ==================== POPUP ==================== //
+
+const openButtons = document.querySelectorAll('.open-modal');
+openButtons.forEach(button =>{
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        console.log(modalId);
+        modal.showModal();
+    });
+});
+
+const closeButtons = document.querySelectorAll('.close-modal');
+closeButtons.forEach(button =>{
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        modal.close();
+
+    });
 });
 
 
@@ -101,30 +138,6 @@ function moverCarrossel(direcao) {
     });
 }
 
-// ==================== Popup ==================== //
-
-const openButtons = document.querySelectorAll('[data-modal]');
-openButtons.forEach(button =>{
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-
-        console.log(modalId);
-
-    });
-});
-
-
-const closeButtons = document.querySelectorAll('.close-modal');
-closeButtons.forEach(button =>{
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-
-        modal.close();
-
-    });
-});
 
 // ==================== FORMULÁRIO ==================== //
 function enviarMensagem(event) {

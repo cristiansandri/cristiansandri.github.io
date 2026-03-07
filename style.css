@@ -214,6 +214,11 @@ h1 {
     scroll-snap-stop: always;
 }
 
+.projetos-card a,
+.projetos-card img {
+    -webkit-user-drag: none; user-drag: none;
+}
+
 @media (max-width: 900px){
     .projetos-card {
         min-width: calc(50% - 1rem);
@@ -236,7 +241,8 @@ h1 {
     height: 200px;
     width: 100%;
     object-fit: cover;
-
+    user-select: none; 
+    -webkit-user-drag: none;
 }
 
 .info-projetos {
