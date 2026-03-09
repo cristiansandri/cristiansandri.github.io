@@ -92,12 +92,19 @@ h1 {
 
 h2 {
     font-size: 1rem;
-    color: var(--quaseclaro);
+    color: var(--claro);
     margin: 5px;
 }
 
-p {
+h3 {
     font-size: 1rem;
+    color: var(--quaseclaro);
+    margin: 5px;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 0.9rem;
     color: var(--claro);
     font-weight: lighter;
     font-weight: bold;
@@ -115,6 +122,7 @@ p {
 
 .sobre {
     padding: 6rem 2rem;
+    margin-top: -200px;
 }
 
 .sobre-titulo {
@@ -143,13 +151,13 @@ p {
 
 
 /* ============== Carrossel e botões ============== */
-.carrossel{
+.carrossel {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.btn-carrossel{
+.btn-carrossel {
     position: absolute;
     top: 40%;
     transform: translateY(0%);
@@ -167,17 +175,17 @@ p {
     transition: all 0.3s ease;
 }
 
-.btn-carrossel:hover{
+.btn-carrossel:hover {
     scale: 120%;
     background: rgba(255, 255, 255, 0.15);
     color: var(--claro);
 }
 
-.antes{
+.antes {
     left: -50px;
 }
 
-.prox{
+.prox {
     right: -50px;
 }
 
@@ -235,17 +243,6 @@ p {
     color: inherit;
 }
 
-@media (max-width: 900px){
-    .projetos-card {
-        min-width: calc(50% - 1rem);
-    }
-}
-
-@media (max-width: 600px){
-    .projetos-card {
-        min-width: calc(100%);
-    }
-}
 
 .projetos-card:hover {
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
@@ -257,7 +254,7 @@ p {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    user-select: none; 
+    user-select: none;
     -webkit-user-drag: none;
 }
 
@@ -278,7 +275,7 @@ p {
 
 /* ============== Popup Projetos ============== */
 
-.popup-caixa{
+.popup-caixa {
     display: flex;
     position: fixed;
     top: 50%;
@@ -287,13 +284,12 @@ p {
     width: 90%;
     height: 550px;
     max-width: 1200px;
-    background-color: #0f172a;
-    border: 1px solid var(--vidro);
+    background-color: rgba(15, 15, 15, 0.7);
     box-sizing: border-box;
-    
+    border-radius: 15px;
 }
 
-dialog::backdrop{
+dialog::backdrop {
     background-color: rgba(15, 15, 15, 0.541);
     backdrop-filter: blur(2px);
 }
@@ -317,13 +313,13 @@ dialog::backdrop{
     transition: all 0.2s ease;
 }
 
-.close-modal:hover{
+.close-modal:hover {
     scale: 120%;
     background: rgba(223, 17, 17, 0.747);
     color: var(--claro);
 }
 
-.btn-popup{
+.btn-popup {
     position: absolute;
     top: 40%;
     transform: translateY(0%);
@@ -341,19 +337,20 @@ dialog::backdrop{
     transition: all 0.3s ease;
 }
 
-.btn-popup:hover{
+.btn-popup:hover {
     scale: 120%;
     background: rgba(255, 255, 255, 0.15);
     color: var(--claro);
 }
 
-.antes{
+.antes {
     left: -50px;
 }
 
-.prox{
+.prox {
     right: -50px;
 }
+
 .popup-esquerda {
     width: 65%;
     position: relative;
@@ -362,79 +359,85 @@ dialog::backdrop{
     align-items: center;
 }
 
-.popup-carrossel-track-container{
+.popup-carrossel-track-container {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border-radius: 15px 0px 0px 15px;
 }
 
-.popup-carrossel-track{
-    display:flex;
+.popup-carrossel-track {
+    display: flex;
     height: 100%;
     padding: 0;
     list-style: none;
     transition: transform 0.4s ease-in-out;
 }
 
-.popup-carrossel-slide{
+.popup-carrossel-slide {
     min-width: 100%;
     height: 100%;
+
 }
 
-.popup-carrossel-slide img{
+.popup-carrossel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.popup-direita{
+.popup-direita {
     width: 35%;
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--vidro);
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0px 15px 15px 0px;
 }
 
 
-.direita-metade-superior{
+.direita-metade-superior {
     padding: 20px 20px 10px 20px;
 }
 
-.softwares-titulo{
+.softwares-titulo {
     display: flex;
     gap: 10px;
     margin-top: 30px;
 }
 
-.software-icons{
+.software-icons {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
     gap: 13px;
 }
 
-.icon-software{
-    color:#e2e8f0;
+.icon-software {
+    color: #e2e8f0;
     font-size: 25px;
 }
 
-.direita-metade-inferior{
+.direita-metade-inferior {
     padding: 15px 20px;
     flex-grow: 1;
     overflow-y: auto;
+    margin-bottom: 15px;
 }
 
-.direita-metade-inferior p{
+.direita-metade-inferior p {
     font-size: 13px;
     line-height: 1.5;
     margin-top: 0;
 }
 
-.direita-metade-inferior::-webkit-scrollbar{
+.direita-metade-inferior::-webkit-scrollbar {
     width: 6px;
 }
 
-.direita-metade-inferior::-webkit-scrollbar-thumb{
+.direita-metade-inferior::-webkit-scrollbar-thumb {
     background-color: #e2e8f0;
 }
 
@@ -513,6 +516,11 @@ dialog::backdrop{
         var(--maisescuro);
 }
 
+.sem-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 @keyframes flutuar {
 
     0%,
@@ -523,4 +531,83 @@ dialog::backdrop{
     50% {
         transform: translateY(-20px)
     }
+}
+
+@media (max-width: 900px) {
+    .projetos-card {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.0rem;
+        color: var(--primaria);
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+        color: var(--quaseclaro);
+        margin: 5px;
+        font-weight: lighter;
+    }
+
+    .menu-link {
+        font-size: 0.8rem;
+    }
+
+    .projetos-card {
+        min-width: calc(100%);
+    }
+
+    .popup-carrossel-track-container {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .popup-caixa {
+        flex-direction: column;
+        width: 95vh;
+        height: 90vh;
+        max-width: 90%;
+    }
+
+    .softwares-titulo {
+        display: flex;
+        gap: 10px;
+        margin-top: 13px;
+    }
+
+    .popup-esquerda {
+        width: 100%;
+        height: 40%;
+    }
+
+    .popup-direita {
+        width: 100%;
+        height: 60%;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .direita-metade-superior {
+        padding: 15px;
+    }
+
+    .direita-metade-inferior {
+        overflow-y: none;
+        padding: 10px 15px;
+    }
+
+    .close-modal {
+        top: -72%;
+        left: 90%;
+    }
+
+    .btn-popup {
+        top: 25%;
+    }
+
+
 }

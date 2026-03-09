@@ -108,6 +108,7 @@ openButtons.forEach(button => {
         if (modal) {
             modal.showModal();
             iniciarCarrossel(modal);
+            document.body.classList.add('sem-scroll');
         };
     });
 });
@@ -118,6 +119,7 @@ closeButtons.forEach(button => {
         const modalId = button.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
         if (modal) modal.close();
+        document.body.classList.remove('sem-scroll');
     });
 });
 
@@ -126,6 +128,7 @@ modais.forEach(modal => {
     modal.addEventListener('click', (event) => {
         if (event.target ===modal) {
             modal.close();
+            document.body.classList.remove('sem-scroll');
         }
     });
 });
