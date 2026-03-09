@@ -1,6 +1,6 @@
-//Adicionar função de esconder os botões no mobile talvez.
-// Fazer o card levar para um link externo nos sites e projetos ou abrir popup nos de design 
+// ==================== NOTAS ==================== //
 
+ 
 
 // ==================== AUTOPLAY CARROSSEL ==================== //
 let indiceAtual = 0;
@@ -36,6 +36,8 @@ function iniciarAutoPlay() {
     }, 5000);
 }
 
+
+
 // ==================== PAUSA AO ARRASTAR ==================== //
 const projetosCaixa = document.querySelector(".projetos-caixa");
 
@@ -43,7 +45,7 @@ let arrastando = false;
 let posicaoInicialX;
 let scrollInicial;
 let deslocamentoTotal = 0;
-let THRESHOLD_ARRASTO= 5;
+let THRESHOLD_ARRASTO = 5;
 
 projetosCaixa.addEventListener("pointerdown", (evento) => {
     arrastando = true;
@@ -51,8 +53,8 @@ projetosCaixa.addEventListener("pointerdown", (evento) => {
 
     posicaoInicialX = evento.pageX;
     scrollInicial = projetosCaixa.scrollLeft;
-    deslocamentoTotal = 0; 
-    
+    deslocamentoTotal = 0;
+
     clearInterval(intervaloAutoPlay);
 });
 
@@ -62,7 +64,7 @@ projetosCaixa.addEventListener("pointermove", (evento) => {
     evento.preventDefault();
 
     const posicaoAtualX = evento.pageX;
-    deslocamentoTotal = Math.abs(posicaoAtualX - posicaoInicialX); 
+    deslocamentoTotal = Math.abs(posicaoAtualX - posicaoInicialX);
 
     const deslocamento = (posicaoAtualX - posicaoInicialX) * 1.5;
 
@@ -83,42 +85,94 @@ projetosCaixa.addEventListener("pointercancel", () => {
     iniciarAutoPlay();
 });
 
+
+
+
 // ======== PERMITIR CLIQUE APENAS SE NÃO HOUVE ARRASTO =========== //
-
-
-projetosCaixa.addEventListener("click", (evento) =>{
-        if (deslocamentoTotal > THRESHOLD_ARRASTO) {
-            evento.preventDefault();
-            evento.stopPropagation();
-        }
-    }, {capture: true});
+projetosCaixa.addEventListener("click", (evento) => {
+    if (deslocamentoTotal > THRESHOLD_ARRASTO) {
+        evento.preventDefault();
+        evento.stopPropagation();
+    }
+}, { capture: true });
 
 
 
-// ==================== POPUP ==================== //
-
+// ==================== Abrir e fechar POPUP ==================== //
 const openButtons = document.querySelectorAll('.open-modal');
-openButtons.forEach(button =>{
+openButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
 
-        console.log(modalId);
-        modal.showModal();
+        if (modal) {
+            modal.showModal();
+            iniciarCarrossel(modal);
+        };
     });
 });
 
 const closeButtons = document.querySelectorAll('.close-modal');
-closeButtons.forEach(button =>{
+closeButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
-        
-        console.log(modalId);
-        modal.close();
-
+        if (modal) modal.close();
     });
 });
+
+const modais = document.querySelectorAll('dialog');
+modais.forEach(modal => {
+    modal.addEventListener('click', (event) => {
+        if (event.target ===modal) {
+            modal.close();
+        }
+    });
+});
+
+
+
+
+
+// ==================== Carossel Popup ==================== //
+function iniciarCarrossel(modalAtual) {
+    const track = modalAtual.querySelector('.popup-carrossel-track');
+    const botaoAntes = document.querySelector('.btn-popup.antes');
+    const botaoProx = document.querySelector('.btn-popup.prox');
+
+    if (!track) {
+        return;
+    }
+
+    const slides = Array.from(track.children);
+
+    let indexAtual = 0;
+
+    function updateCarrossel() {
+        track.style.transform = `translateX(-${indexAtual * 100}%)`;
+    }
+
+    indexAtual = 0;
+    updateCarrossel();
+
+    if (botaoProx) {
+        botaoProx.onclick = (e) => {
+            e.preventDefault();
+            indexAtual = (indexAtual + 1) % slides.length;
+            updateCarrossel();
+        };
+    }
+
+    if (botaoAntes) {
+        botaoAntes.onclick = (e) => {
+            e.preventDefault();
+            indexAtual = (indexAtual - 1 + slides.length) % slides.length;
+            updateCarrossel();
+        };
+    }
+}
+
+
 
 
 

@@ -88,7 +88,6 @@ h1 {
     color: var(--primaria);
     font-weight: bold;
     margin: 5px;
-
 }
 
 h2 {
@@ -291,8 +290,13 @@ p {
     background-color: #0f172a;
     border: 1px solid var(--vidro);
     box-sizing: border-box;
+    
 }
 
+dialog::backdrop{
+    background-color: rgba(15, 15, 15, 0.541);
+    backdrop-filter: blur(2px);
+}
 
 
 .close-modal {
@@ -319,6 +323,37 @@ p {
     color: var(--claro);
 }
 
+.btn-popup{
+    position: absolute;
+    top: 40%;
+    transform: translateY(0%);
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--claro);
+    font-size: 28px;
+    padding: 1px 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    margin: 40px;
+    transition: all 0.3s ease;
+}
+
+.btn-popup:hover{
+    scale: 120%;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--claro);
+}
+
+.antes{
+    left: -50px;
+}
+
+.prox{
+    right: -50px;
+}
 .popup-esquerda {
     width: 65%;
     position: relative;
