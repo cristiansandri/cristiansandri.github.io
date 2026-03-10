@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-    --primaria: rgb(223, 102, 31);
+    --primaria: #df661f;
     --secundaria: #d4230c;
     --escuro: #070808;
     --maisescuro: #0a0f1c;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/fundo topografico.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fundo topografico.webp');
     background-blend-mode: darken;
     background-size: 100%;
     background-repeat: repeat-y;
@@ -29,11 +29,14 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(37, 37, 37, 0.8);
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.05);
     width: 100%;
     z-index: 100;
     padding: 20px;
 }
+
 .menu {
     display: flex;
     justify-content: center;
@@ -176,9 +179,9 @@ p {
 }
 
 
-.btn-carrossel img{
-  width: 12px;
-  display: block;
+.btn-carrossel img {
+    width: 12px;
+    display: block;
 }
 
 .btn-carrossel:hover {
@@ -230,8 +233,6 @@ p {
 .projetos-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--vidro);
     overflow-x: auto;
     overflow-y: hidden;
     transition: all 0.5s ease;
@@ -240,6 +241,8 @@ p {
     pointer-events: auto;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
 }
 
 .projetos-card a,
@@ -303,18 +306,19 @@ dialog::backdrop {
 
 .close-modal {
     position: absolute;
-    top: -5%;
-    left: 95%;
+    top: -10%;
+    left: 85%;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
     background: rgba(175, 13, 13, 0.514);
     color: var(--claro);
     font-size: 15px;
-    padding: 10px 12px;
+    padding: 10px;
+    display: block;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
+    border-radius: 15px 15px 15px 0px;
     margin: 0px;
     transition: all 0.2s ease;
 }
@@ -344,9 +348,9 @@ dialog::backdrop {
     display: block;
 }
 
-.btn-popup img{
-  width: 13px;
-  display: block;
+.btn-popup img {
+    width: 13px;
+    display: block;
 }
 
 .btn-popup:hover {
@@ -514,7 +518,7 @@ dialog::backdrop {
     transform: translateY(-4px);
 }
 
-.particulas {
+/*.particulas {
     position: fixed;
     top: 10%;
     left: -30%;
@@ -527,12 +531,12 @@ dialog::backdrop {
     background-image: url('img/x laranja.png');
     background-repeat: no-repeat;
     filter: blur(10px);
-   
-    /*background:
+
+    background:
         radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
         radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-        var(--maisescuro);*//
-}
+        var(--maisescuro);
+}*/
 
 .sem-scroll {
     overflow: hidden;
@@ -573,59 +577,62 @@ dialog::backdrop {
         font-weight: lighter;
     }
 
-    .menu-link {
-        font-size: 0.8rem;
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/fundo topografico.webp');
     }
+        .menu-link {
+            font-size: 0.8rem;
+        }
 
-    .projetos-card {
-        min-width: calc(100%);
+        .projetos-card {
+            min-width: calc(100%);
+        }
+
+        .popup-carrossel-track-container {
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .popup-caixa {
+            flex-direction: column;
+            width: 95vh;
+            height: 80vh;
+            max-width: 90%;
+        }
+
+        .softwares-titulo {
+            display: flex;
+            gap: 10px;
+            margin-top: 13px;
+        }
+
+        .popup-esquerda {
+            width: 100%;
+            height: 40%;
+        }
+
+        .popup-direita {
+            width: 100%;
+            height: 60%;
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        .direita-metade-superior {
+            padding: 15px;
+        }
+
+        .direita-metade-inferior {
+            overflow-y: none;
+            padding: 10px 15px;
+        }
+
+        .close-modal {
+            top: -80%;
+            left: 92%;
+        }
+
+        .btn-popup {
+            top: 25%;
+        }
+
+
     }
-
-    .popup-carrossel-track-container {
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    .popup-caixa {
-        flex-direction: column;
-        width: 95vh;
-        height: 90vh;
-        max-width: 90%;
-    }
-
-    .softwares-titulo {
-        display: flex;
-        gap: 10px;
-        margin-top: 13px;
-    }
-
-    .popup-esquerda {
-        width: 100%;
-        height: 40%;
-    }
-
-    .popup-direita {
-        width: 100%;
-        height: 60%;
-        border-radius: 0px 0px 15px 15px;
-    }
-
-    .direita-metade-superior {
-        padding: 15px;
-    }
-
-    .direita-metade-inferior {
-        overflow-y: none;
-        padding: 10px 15px;
-    }
-
-    .close-modal {
-        top: -72%;
-        left: 90%;
-    }
-
-    .btn-popup {
-        top: 25%;
-    }
-
-
-}
