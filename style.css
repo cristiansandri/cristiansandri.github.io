@@ -20,8 +20,9 @@ html {
 }
 
 body {
-    background-color: var(--escuro);
-    color: var(--claro);
+    background-image: url('img/fundo topografico.jpg');
+    background-size: 100%;
+    background-repeat: repeat-y;
 }
 
 .navegacao {
@@ -504,16 +505,22 @@ dialog::backdrop {
 
 .particulas {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10%;
+    left: -30%;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background:
+    z-index: 100;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0.9;
+    background-image: url('img/x laranja.png');
+    background-repeat: no-repeat;
+    filter: blur(10px);
+   
+    /*background:
         radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
         radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-        var(--maisescuro);
+        var(--maisescuro);*//
 }
 
 .sem-scroll {
