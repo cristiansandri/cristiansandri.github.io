@@ -385,9 +385,11 @@ dialog[open]::backdrop {
 }
 
 .popup-esquerda {
-    width: 70%;
+    width: 68%;
     position: relative;
-    background-color: #0f172a;
+    backdrop-filter: blur(10px);
+    background-color: rgba(22, 22, 22, 0.103);
+    
     display: flex;
     align-items: center;
     border-radius: 15px 0px 0px 15px;
@@ -417,7 +419,7 @@ dialog[open]::backdrop {
 .popup-carrossel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 .popup-direita {
