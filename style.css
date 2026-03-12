@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Figtree", sans-serif;
 }
 
 html {
@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-    --primaria: #df661f;
+    --primaria: #ff9100;
     --secundaria: #d4230c;
     --escuro: #070808;
     --maisescuro: #0a0f1c;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fundo topografico.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/fundo topografico.webp');
     background-blend-mode: darken;
     background-size: 100%;
     background-repeat: repeat-y;
@@ -88,7 +88,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--primaria);
     font-weight: bold;
     margin: 5px;
@@ -121,6 +121,7 @@ p {
     margin: 5px;
 }
 
+
 .cabecalho-subtitulo {
     font-size: 1.1rem;
     color: var(--claro);
@@ -147,8 +148,8 @@ p {
     margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .sobre-paragrafo {
@@ -237,7 +238,6 @@ p {
 }
 
 .projetos-card {
-    background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -247,8 +247,10 @@ p {
     pointer-events: auto;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
+   
 }
 
 .projetos-card a,
@@ -260,7 +262,7 @@ p {
 
 
 .projetos-card:hover {
-    box-shadow: 0 10px 20px rgba(223, 102, 31, 0.2);
+    box-shadow: 0 10px 20px rgba(223, 102, 31, 0.3);
     transform: translateY(-10px) scale(1.03);
 
 }
@@ -279,7 +281,7 @@ p {
 }
 
 .caixa-textos-projeto {
-    padding: 1.5rem;
+    padding: 1.8rem;
 }
 
 .paragrafo-projetos {
@@ -303,8 +305,16 @@ p {
     box-sizing: border-box;
     border-radius: 15px;
 }
+dialog[open] .popup-caixa{
+    animation: popupAbrindo 0.3s ease-out forwards;
+}
 
 dialog::backdrop {
+    transition: opacity 0.3s ease;
+    background-color: rgba(15, 15, 15, 0);
+}
+
+dialog[open]::backdrop {
     background-color: rgba(15, 15, 15, 0.541);
     backdrop-filter: blur(2px);
 }
@@ -470,10 +480,11 @@ dialog::backdrop {
     margin: 20px;
     background-color: #e2e8f0;
     transition: all ease 0.2s;
+    padding: 5px;
 }
 
 .btn-acessar:hover{
-    scale: 102%;
+    scale: 104%;
     cursor: pointer;
 }
 
@@ -571,6 +582,17 @@ dialog::backdrop {
 
     50% {
         transform: translateY(-20px)
+    }
+}
+
+@keyframes popupAbrindo {
+    from {
+        opacity: 0%;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+     to {
+        opacity: 100%;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 

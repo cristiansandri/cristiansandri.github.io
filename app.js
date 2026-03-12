@@ -97,8 +97,8 @@ openButtons.forEach(button => {
 
         if (modal) {
             modal.showModal();
-            iniciarCarrossel(modal);
             document.body.classList.add('sem-scroll');
+            iniciarCarrossel(modal);
         };
     });
 });
@@ -131,15 +131,12 @@ modais.forEach(modal => {
 // ==================== Carossel Popup ==================== //
 function iniciarCarrossel(modalAtual) {
     const track = modalAtual.querySelector('.popup-carrossel-track');
-    const botaoAntes = document.querySelector('.btn-popup.antes');
-    const botaoProx = document.querySelector('.btn-popup.prox');
+    const botaoAntes = modalAtual.querySelector('.btn-popup.antes');
+    const botaoProx = modalAtual.querySelector('.btn-popup.prox');
 
-    if (!track) {
-        return;
-    }
+    if (!track || !botaoAntes || !botaoProx) return;
 
     const slides = Array.from(track.children);
-
     let indexAtual = 0;
 
     function updateCarrossel() {
