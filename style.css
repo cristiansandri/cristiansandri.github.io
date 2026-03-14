@@ -153,7 +153,6 @@ p {
 .sobre-icons {
     text-align: center;
     margin-top: 20px;
-    transform: scale(120%);
 }
 
 .sobre-paragrafo {
@@ -529,8 +528,8 @@ dialog[open]::backdrop {
 
 /* ============== Formulário de contato ============== */
 .contatos {
-    padding: 6rem 2rem;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contatos-titulo {
