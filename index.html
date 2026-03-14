@@ -17,8 +17,6 @@
 
 
 <body>
-    <!-- Particulas -->
-    <!-- <div class="particulas"></div> -->
 
     <!-- Header menu -->
     <nav class="navegacao">
@@ -49,10 +47,11 @@
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Designer gráfico com <b>5 anos de experiência</b> em criação visual e produção
-                de conteúdo digital.<br><br>
-                A um ano estudo desenvolvimento front-end com foco incial em HTML, CSS e
-                JavaScript e Git e Github para versionamento.<br><br>
+            <p class="sobre-paragrafo"><b>5 anos de experiência</b> em criação visual e produção de conteúdo digital. 2
+                anos de experiência com marketing.
+                <br><br>
+                A um ano estudo desenvolvimento front-end com foco inicial em HTML, CSS e
+                JavaScript. Git e Github para versionamento.<br><br>
                 Nesse período fiz algumas landing pages e ferramentas em parceria com algumas empresas.
             </p>
         </div>
@@ -1049,19 +1048,19 @@
                 <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
                 <div class="popup-carrossel-track-container">
                     <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Design-ibex_1.webp"
+                        <li class="popup-carrossel-slide"><img src="projetos/Design-Ibex_1.webp"
                                 alt="Projeto de Design Id Visual"></li>
 
-                        <li class="popup-carrossel-slide"><img src="projetos/Design-ibex_2.webp"
+                        <li class="popup-carrossel-slide"><img src="projetos/Design-Ibex_2.webp"
                                 alt="Projeto de Design Id Visual"></li>
 
-                        <li class="popup-carrossel-slide"><img src="projetos/Design-ibex_3.webp"
+                        <li class="popup-carrossel-slide"><img src="projetos/Design-Ibex_3.webp"
                                 alt="Projeto de Design Id Visual"></li>
 
-                        <li class="popup-carrossel-slide"><img src="projetos/Design-ibex_4.webp"
+                        <li class="popup-carrossel-slide"><img src="projetos/Design-Ibex_4.webp"
                                 alt="Projeto de Design Id Visual"></li>
 
-                        <li class="popup-carrossel-slide"><img src="projetos/Design-ibex_5.webp"
+                        <li class="popup-carrossel-slide"><img src="projetos/Design-Ibex_5.webp"
                                 alt="Projeto de Design Id Visual"></li>
                     </ul>
                 </div>
@@ -1457,18 +1456,46 @@
     <section id="contato" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarMensagem(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
+        <div class="contatos-container">
+
+            <form class="formulario-contato" id="formulario" onsubmit="enviarMensagem(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome" required>
+                </div>
+
+                <div>
+                    <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="botao-mensagem"><i class="fa-brands fa-whatsapp"
+                        style="color: rgb(230, 230, 230);"></i> Enviar no Whatsapp</button>
+            </form>
+
+            <div class="redes-sociais">
+                <a href="https://github.com/cristiansandri" class="cartao-social" target="_blank">
+                    <img src="img/icon-github.webp" class="icone-social">
+                    <span>CristianSandri</span>
+                </a>
+
+                <a href="https://www.instagram.com/_csandri" class="cartao-social" target="_blank">
+                    <img src="img/icon-insta.webp" class="icone-social">
+                    <span>_Csandri</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/cristian-sandri-6b97ba17b/" class="cartao-social" target="_blank">
+                    <img src="img/icon-linkedin.webp" class="icone-social">
+                    <span>CristianSandri</span>
+                </a>
+
+                <a href="mailto:Cristiansandri.cs1515@gmail.com" class="cartao-social">
+                    <img src="img/icon-email.webp" class="icone-social">
+                    <span>Cristiansandri.cs1515<br>@gmail.com</span>
+                </a>
             </div>
 
-            <div>
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem"></textarea>
-            </div>
-            <button type="submit" class="botao-mensagem">Enviar no Whatsapp</button>
-        </form>
+        </div>
     </section>
-
+    <p class="texto-final">Feito por Cristian Sandri © 2026</p>
     <script src="app.js"></script>
 </body>
 

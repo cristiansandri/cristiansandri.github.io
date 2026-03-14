@@ -21,7 +21,6 @@ html {
 
 body {
     background-image: url('img/fundo topografico.webp');
-    background-blend-mode: darken;
     background-size: 1200px;
     background-color: #111111;
 }
@@ -106,6 +105,7 @@ h3 {
     margin: 5px;
     font-weight: lighter;
 }
+
 h4 {
     font-size: 1rem;
     color: #181818;
@@ -135,7 +135,7 @@ p {
 }
 
 .sobre-titulo {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -218,8 +218,8 @@ p {
 
 .projetos-titulo {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .projetos-caixa {
@@ -253,7 +253,7 @@ p {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
-   
+
 }
 
 .projetos-card a,
@@ -308,7 +308,8 @@ p {
     box-sizing: border-box;
     border-radius: 15px;
 }
-dialog[open] .popup-caixa{
+
+dialog[open] .popup-caixa {
     animation: popupAbrindo 0.3s ease-out forwards;
 }
 
@@ -332,7 +333,7 @@ dialog[open]::backdrop {
     backdrop-filter: blur(10px);
     background: rgba(175, 13, 13, 0.9);
     color: var(--claro);
-    font-size: 15px;
+    font-size: 10px;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
@@ -457,7 +458,7 @@ dialog[open]::backdrop {
     margin-bottom: 5px;
 }
 
-.tooltip{
+.tooltip {
     position: relative;
     display: inline-flex;
     flex-direction: column;
@@ -467,11 +468,11 @@ dialog[open]::backdrop {
     transition: all 0.2s ease;
 }
 
-.tooltip-text{
+.tooltip-text {
     position: absulute;
     bottom: 120%;
-    right: 100%;
-    
+    right: 1%;
+
     background: #000;
     color: #fff;
     padding: 4px 8px;
@@ -483,11 +484,12 @@ dialog[open]::backdrop {
     transition: all 0.2s ease;
 }
 
-.tooltip:hover{
+.tooltip:hover {
     transform: translateY(-8px) scale(1.15);
+    z-index: 10;
 }
 
-.tooltip:hover .tooltip-text{
+.tooltip:hover .tooltip-text {
     opacity: 1;
 }
 
@@ -513,7 +515,7 @@ dialog[open]::backdrop {
     background-color: #e2e8f0;
 }
 
-.btn-acessar{
+.btn-acessar {
     border-radius: 20px;
     margin: 0px 15px 15px 15px;
     background-color: #e2e8f0;
@@ -521,52 +523,71 @@ dialog[open]::backdrop {
     padding: 5px;
 }
 
-.btn-acessar:hover{
+.btn-acessar:hover {
     scale: 104%;
     cursor: pointer;
 }
 
-/* ============== Formulário de contato ============== */
+/* ===== Contatos ===== */
 .contatos {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 4rem;
 }
 
 .contatos-titulo {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--claro);
+}
+
+.contatos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 900px;
 }
 
 .formulario-contato {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     padding: 2rem;
     border: 1px solid var(--vidro);
     border-radius: 15px;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
 }
 
 .campo-form {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: 5px;
     color: var(--claro);
-    border: 1px solid var(var(--vidro));
+    border: 1px solid var(--vidro);
     outline: none;
     resize: vertical;
+    min-height: 50px;
+}
+
+textarea.campo-form {
+    min-height: 120px;
 }
 
 .campo-form:focus {
     border-color: var(--secundaria);
     box-shadow: 0 10px 20px rgba(223, 102, 31, 0.2);
-
-}
-
-.grupo-form {
-    margin-bottom: 1.5rem;
 }
 
 .botao-mensagem {
@@ -586,29 +607,59 @@ dialog[open]::backdrop {
     transform: translateY(-4px);
 }
 
-/*.particulas {
-    position: fixed;
-    top: 10%;
-    left: -30%;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    pointer-events: none;
-    will-change: transform;
-    opacity: 0.9;
-    background-image: url('img/x laranja.png');
-    background-repeat: no-repeat;
-    filter: blur(10px);
+.redes-sociais {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
 
-    background:
-        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-        var(--maisescuro);
-}*/
+.cartao-social {
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--claro, #ffffff);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
 
-.sem-scroll {
-    overflow: hidden;
-    height: 100vh;
+.cartao-social:hover {
+    border: 1px solid var(--primaria);
+    background: rgb(138, 138, 138, 0.2);
+    transform: translateX(3px);
+    box-shadow: 0 10px 20px rgba(223, 102, 31, 0.3);
+
+}
+
+.cartao-social span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.icone-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.texto-final {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
 }
 
 @keyframes flutuar {
@@ -628,7 +679,8 @@ dialog[open]::backdrop {
         opacity: 0%;
         transform: translate(-50%, -48%) scale(0.96);
     }
-     to {
+
+    to {
         opacity: 100%;
         transform: translate(-50%, -50%) scale(1);
     }
@@ -638,6 +690,11 @@ dialog[open]::backdrop {
     .projetos-card {
         min-width: calc(50% - 1rem);
     }
+
+    .redes-sociais {
+        max-width: 100%;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -657,72 +714,80 @@ dialog[open]::backdrop {
     }
 
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/fundo topografico.webp');
+        background-image: url('img/fundo topografico.webp');
     }
-        .menu-link {
-            font-size: 0.8rem;
-        }
 
-        .projetos-card {
-            min-width: calc(100%);
-        }
+    .menu-link {
+        font-size: 0.8rem;
+    }
 
-        .popup-carrossel-track-container {
-            border-radius: 15px 15px 0px 0px;
-        }
+    .sobre-icons {
+        margin-top: 30px;
+    }
 
-        .popup-caixa {
-            flex-direction: column;
-            width: 95vh;
-            height: 90vh;
-            max-width: 90%;
-        }
+    .projetos-card {
+        min-width: calc(100%);
+    }
+
+    .popup-carrossel-track-container {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .popup-caixa {
+        flex-direction: column;
+        width: 95vh;
+        height: 90vh;
+        max-width: 90%;
+    }
 
 
-        .softwares-titulo {
-            display: flex;
-            gap: 10px;
-            margin-top: 13px;
-        }
+    .softwares-titulo {
+        display: flex;
+        gap: 10px;
+        margin-top: 13px;
+    }
 
-        .popup-esquerda {
+    .popup-esquerda {
 
-            width: 100%;
-            height: 40%;
-        }
+        width: 100%;
+        height: 40%;
+    }
 
-        .popup-direita {
-            width: 100%;
-            height: 60%;
-            border-radius: 0px 0px 15px 15px;
-        }
+    .popup-direita {
+        width: 100%;
+        height: 60%;
+        border-radius: 0px 0px 15px 15px;
+    }
 
-        .popup-carrossel-slide img {
-            object-fit: cover;
-        }
+    .popup-carrossel-slide img {
+        object-fit: cover;
+    }
 
-        .tooltip{
-            margin-bottom: -18px;
-        }
+    .tooltip {
+        margin-bottom: -18px;
+    }
 
-        .direita-metade-superior {
-            padding: 15px;
-        }
+    .direita-metade-superior {
+        padding: 15px;
+    }
 
-        .direita-metade-inferior {
-            overflow-y: none;
-            padding-left: 15px;
-            
-        }
-
-        .close-modal {
-            top: -60%;
-            font-size: 10px;
-        }
-
-        .btn-popup {
-            top: 25%;
-        }
-
+    .direita-metade-inferior {
+        overflow-y: none;
+        padding-left: 15px;
 
     }
+
+    .close-modal {
+        top: -60%;
+        font-size: 10px;
+    }
+
+    .btn-popup {
+        top: 25%;
+    }
+
+    .redes-sociais {
+        max-width: 100%;
+    }
+
+}

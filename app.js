@@ -1,5 +1,3 @@
-// ==================== NOTAS ==================== //
-
 // ==================== AUTOPLAY CARROSSEL ==================== //
 const todosCarrosseis = document.querySelectorAll(".projetos-caixa");
 
@@ -199,10 +197,3 @@ function enviarMensagem(event) {
 
     window.open(url, '_blank');
 }
-
-/*window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const floatingEl = document.querySelector('.particulas');
-  
-  floatingEl.style.transform = `translateY(${scrolled * -2.5}px)`;
-});*/
