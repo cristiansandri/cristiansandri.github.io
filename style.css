@@ -520,7 +520,8 @@ dialog[open]::backdrop {
     margin: 0px 15px 15px 15px;
     background-color: #e2e8f0;
     transition: all ease 0.2s;
-    padding: 5px;
+    padding: 3px;
+    border: 1px solid #202020;
 }
 
 .btn-acessar:hover {
