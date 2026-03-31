@@ -423,6 +423,374 @@
 
 
 
+    <!-- Cards Projetos Menores e Exercícios-->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Projetos Menores</h2>
+
+        <div class="carrossel">
+
+            <button onclick="moverCarrossel(-1, 'carrossel-3')" class="btn-carrossel antes"><img
+                    src="./img/btn-esq.webp"></button>
+
+            <div class="projetos-caixa" id="carrossel-3">
+
+
+
+
+
+                <div class="projetos-card open-modal" data-modal="calc-jur-abs">
+                    <img src="projetos/Proj-calc-comp-abus_1.webp" alt="Exercício de Lógica e Programação"
+                        class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Juros Abusivos</h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, calcula se um contrato tem juros acima do permitido por lei.</p>
+                    </div>
+                </div>
+
+                <div class="projetos-card open-modal" data-modal="calc-red-div">
+                    <img src="projetos/Proj-calc-red-div_1.webp" alt="Exercício de Lógica e Programação"
+                        class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Redução de Dívidas</h2>
+                        <p class="paragrafo-projetos">Calcula quantos % de uma dívida está acima do limite estipuado
+                            pelo BACEN e o quanto dela pode ser reduzido através de uma Ação de Revisão Contratual.</p>
+                    </div>
+                </div>
+
+                <div class="projetos-card open-modal" data-modal="calc-jur-comp">
+                    <img src="projetos/Proj-calc-jur-comp_1.webp" alt="Exercício de Lógica e Programação"
+                        class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Juros Compostos</h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, usado para complementar o SEO e gerar cliques orgânicos na página.</p>
+                    </div>
+                </div>
+
+                <div class="projetos-card open-modal" data-modal="calc-comp-renda">
+                    <img src="projetos/Proj-calc-comp-ren_1.webp" alt="Exercício de Lógica e Programação"
+                        class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Ferramenta: Calculadora de Comprometimento de Renda</h2>
+                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
+                            direito, calcula a % de comprometimento da renda com dívidas relacionadas ao "mínimo
+                            existêncial".</p>
+                    </div>
+                </div>
+
+                <div class="projetos-card open-modal" data-modal="portfolio">
+                    <img src="projetos/Proj-portifólio.webp" alt="Exercício de Lógica e Programação"
+                        class="projetos-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h2 class="info-projetos">Portifólio</h2>
+                        <p class="paragrafo-projetos">Usei esse portifólio para reforçar varios de meus
+                            conhecimentos. Landing page feita totalmente com HTML, CSS e Javascript.</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="moverCarrossel(1, 'carrossel-3')" class="btn-carrossel prox"><img
+                    src="./img/btn-dir.webp"></button>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- PopUps Projetos Menores e Exercícios -->
+    <dialog id="calc-jur-abs">
+        <div class="popup-caixa">
+            <div class="popup-esquerda">
+                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
+                <div class="popup-carrossel-track-container">
+                    <ul class="popup-carrossel-track">
+                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-comp-abus_1.webp"
+                                alt="Exercício de Programação"></li>
+                    </ul>
+                </div>
+                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
+            </div>
+
+            <div class="popup-direita">
+                <button class="close-modal" type="button">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="direita-metade-superior">
+                    <h1>Calc. de Juros Abusivos</h1>
+                    <h2>Prática de Lógica de Programação</h2>
+
+                    <h3 class="softwares-titulo">Softwares Usados</h3>
+                    <div class="tooltip">
+                        <img src="img/icon-html.webp" class="icon-software">
+                        <span class="tooltip-text">HTML</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-css.webp" class="icon-software">
+                        <span class="tooltip-text">CSS</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-js.webp" class="icon-software">
+                        <span class="tooltip-text">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="direita-metade-inferior">
+                    <p>Ferramenta técnica para identificação de irregularidades em contratos de financiamento.<br><br>
+                        Desenvolvido com HTML5, CSS3 e JS puro, o sistema processa os dados inseridos e gera um feedback
+                        visual imediato sobre a viabilidade de uma ação revisional.
+                    </p>
+                </div>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://cristiansandri.github.io/Form-Calc-Juros-Abusivos', '_blank')">
+
+                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://github.com/cristiansandri/Form-Calc-Juros-Abusivos', '_blank')">
+
+                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="calc-red-div">
+        <div class="popup-caixa">
+            <div class="popup-esquerda">
+                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
+                <div class="popup-carrossel-track-container">
+                    <ul class="popup-carrossel-track">
+                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-red-div_1.webp"
+                                alt="Exercício de Programação"></li>
+                    </ul>
+                </div>
+                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
+            </div>
+
+            <div class="popup-direita">
+                <button class="close-modal" type="button">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="direita-metade-superior">
+                    <h1>Calc. de Redução de Dívidas</h1>
+                    <h2>Prática de Lógica de Programação</h2>
+
+                    <h3 class="softwares-titulo">Softwares Usados</h3>
+                    <div class="tooltip">
+                        <img src="img/icon-html.webp" class="icon-software">
+                        <span class="tooltip-text">HTML</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-css.webp" class="icon-software">
+                        <span class="tooltip-text">CSS</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-js.webp" class="icon-software">
+                        <span class="tooltip-text">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="direita-metade-inferior">
+                    <p>Projeto feito para implementar em um site de um escritório de
+                        direito. <br> <br>
+                        Calcula quantos % de uma dívida está acima do limite estipuado pelo BACEN e o quanto dela pode
+                        ser reduzido através de uma Ação de Revisão Contratual.
+                    </p>
+                </div>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://cristiansandri.github.io/Form-Calc-Provisionamento/', '_blank')">
+
+                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://github.com/cristiansandri/Form-Calc-Provisionamento', '_blank')">
+
+                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="calc-jur-comp">
+        <div class="popup-caixa">
+            <div class="popup-esquerda">
+                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
+                <div class="popup-carrossel-track-container">
+                    <ul class="popup-carrossel-track">
+                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-jur-comp_1.webp"
+                                alt="Exercício de Programação"></li>
+                    </ul>
+                </div>
+                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
+            </div>
+
+            <div class="popup-direita">
+                <button class="close-modal" type="button">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="direita-metade-superior">
+                    <h1>Calc. Juros Compostos</h1>
+                    <h2>Prática de Lógica de Programação</h2>
+
+                    <h3 class="softwares-titulo">Softwares Usados</h3>
+                    <div class="tooltip">
+                        <img src="img/icon-html.webp" class="icon-software">
+                        <span class="tooltip-text">HTML</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-css.webp" class="icon-software">
+                        <span class="tooltip-text">CSS</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-js.webp" class="icon-software">
+                        <span class="tooltip-text">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="direita-metade-inferior">
+                    <p>Calculadora financeira desenvolvida para análise de contratos bancários.<br><br>
+                        O foco técnico deste projeto foi a implementação de fórmulas matemáticas em JavaScript para
+                        garantir a precisão da capitalização ao longo do tempo.<br><br>
+                        O projeto utiliza manipulação de DOM para entrega de resultados em tempo real, facilitando a
+                        simulação de diferentes cenários financeiros.<br><br>
+                    </p>
+                </div>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://cristiansandri.github.io/Calc-Juros-Compostos/', '_blank')">
+
+                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://github.com/cristiansandri/Calc-Juros-Compostos', '_blank')">
+
+                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="calc-comp-renda">
+        <div class="popup-caixa">
+            <div class="popup-esquerda">
+                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
+                <div class="popup-carrossel-track-container">
+                    <ul class="popup-carrossel-track">
+                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-comp-ren_1.webp"
+                                alt="Exercício de Programação"></li>
+                    </ul>
+                </div>
+                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
+            </div>
+
+            <div class="popup-direita">
+                <button class="close-modal" type="button">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="direita-metade-superior">
+                    <h1>Calc. Compromet. de Renda</h1>
+                    <h2>Prática de Lógica de Programação</h2>
+
+                    <h3 class="softwares-titulo">Softwares Usados</h3>
+                    <div class="tooltip">
+                        <img src="img/icon-html.webp" class="icon-software">
+                        <span class="tooltip-text">HTML</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-css.webp" class="icon-software">
+                        <span class="tooltip-text">CSS</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-js.webp" class="icon-software">
+                        <span class="tooltip-text">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="direita-metade-inferior">
+                    <p>Sistema de cálculo baseado na Lei do Superendividamento.<br><br>
+                        A lógica foi estruturada para analisar a margem de subsistência do usuário, calculando
+                        automaticamente a porcentagem da renda comprometida com dívidas bancárias.<br><br>
+                        Tecnicamente, o desafio foi criar um formulário dinâmico que valida diferentes tipos de
+                        despesas, garantindo que o resultado final esteja em total conformidade com os parâmetros legais
+                        vigentes.<br><br>
+                    </p>
+                </div>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://cristiansandri.github.io/Calc-Compromet-Renda/', '_blank')">
+
+                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://github.com/cristiansandri/Calc-Compromet-Renda', '_blank')">
+
+                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="portfolio">
+        <div class="popup-caixa">
+            <div class="popup-esquerda">
+                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
+                <div class="popup-carrossel-track-container">
+                    <ul class="popup-carrossel-track">
+                        <li class="popup-carrossel-slide"><img src="projetos/Proj-portifólio.webp"
+                                alt="Projeto de Web Design"></li>
+
+                    </ul>
+                </div>
+                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
+            </div>
+
+            <div class="popup-direita">
+                <button class="close-modal" type="button">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <div class="direita-metade-superior">
+                    <h1>Portifólio</h1>
+                    <h2>Landing Page</h2>
+
+                    <h3 class="softwares-titulo">Softwares Usados</h3>
+                    <div class="tooltip">
+                        <img src="img/icon-html.webp" class="icon-software">
+                        <span class="tooltip-text">HTML</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-css.webp" class="icon-software">
+                        <span class="tooltip-text">CSS</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <img src="img/icon-js.webp" class="icon-software">
+                        <span class="tooltip-text">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="direita-metade-inferior">
+                    <p>Usei esse portifólio para reforçar varios de meus
+                        conhecimentos. Landing page feita totalmente com HTML, CSS e Javascript.
+                    </p>
+                </div>
+                <button class="btn-acessar" type="button"
+                    onclick="window.open('https://github.com/cristiansandri/cristiansandri.github.io', '_blank')">
+
+                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                </button>
+            </div>
+        </div>
+    </dialog>
+
 
 
     <!-- Cards Design Gráfico -->
@@ -1110,373 +1478,6 @@
         </div>
     </dialog>
 
-
-
-
-
-    <!-- Cards Projetos Menores e Exercícios-->
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Projetos Menores</h2>
-
-        <div class="carrossel">
-
-            <button onclick="moverCarrossel(-1, 'carrossel-3')" class="btn-carrossel antes"><img
-                    src="./img/btn-esq.webp"></button>
-
-            <div class="projetos-caixa" id="carrossel-3">
-
-                <div class="projetos-card open-modal" data-modal="portfolio">
-                    <img src="projetos/Proj-portifólio.webp" alt="Exercício de Lógica e Programação"
-                        class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Portifólio</h2>
-                        <p class="paragrafo-projetos">Usei esse portifólio para reforçar varios de meus
-                            conhecimentos. Landing page feita totalmente com HTML, CSS e Javascript.</p>
-                    </div>
-                </div>
-
-                <div class="projetos-card open-modal" data-modal="calc-jur-comp">
-                    <img src="projetos/Proj-calc-jur-comp_1.webp" alt="Exercício de Lógica e Programação"
-                        class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Ferramenta: Calculadora de Juros Compostos</h2>
-                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
-                            direito, usado para complementar o SEO e gerar cliques orgânicos na página.</p>
-                    </div>
-                </div>
-
-                <div class="projetos-card open-modal" data-modal="calc-comp-renda">
-                    <img src="projetos/Proj-calc-comp-ren_1.webp" alt="Exercício de Lógica e Programação"
-                        class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Ferramenta: Calculadora de Comprometimento de Renda</h2>
-                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
-                            direito, calcula a % de comprometimento da renda com dívidas relacionadas ao "mínimo
-                            existêncial".</p>
-                    </div>
-                </div>
-
-                <div class="projetos-card open-modal" data-modal="calc-jur-abs">
-                    <img src="projetos/Proj-calc-comp-abus_1.webp" alt="Exercício de Lógica e Programação"
-                        class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Ferramenta: Calculadora de Juros Abusivos</h2>
-                        <p class="paragrafo-projetos">Projeto feito para implementar em um site de um escritório de
-                            direito, calcula se um contrato tem juros acima do permitido por lei.</p>
-                    </div>
-                </div>
-
-                <div class="projetos-card open-modal" data-modal="calc-red-div">
-                    <img src="projetos/Proj-calc-red-div_1.webp" alt="Exercício de Lógica e Programação"
-                        class="projetos-imagem">
-                    <div class="caixa-textos-projeto">
-                        <h2 class="info-projetos">Ferramenta: Calculadora de Redução de Dívidas</h2>
-                        <p class="paragrafo-projetos">Calcula quantos % de uma dívida está acima do limite estipuado
-                            pelo BACEN e o quanto dela pode ser reduzido através de uma Ação de Revisão Contratual.</p>
-                    </div>
-                </div>
-            </div>
-            <button onclick="moverCarrossel(1, 'carrossel-3')" class="btn-carrossel prox"><img
-                    src="./img/btn-dir.webp"></button>
-        </div>
-        </div>
-    </section>
-
-
-    <!-- PopUps Projetos Menores e Exercícios -->
-    <dialog id="portfolio">
-        <div class="popup-caixa">
-            <div class="popup-esquerda">
-                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
-                <div class="popup-carrossel-track-container">
-                    <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Proj-portifólio.webp"
-                                alt="Projeto de Web Design"></li>
-
-                    </ul>
-                </div>
-                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
-            </div>
-
-            <div class="popup-direita">
-                <button class="close-modal" type="button">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="direita-metade-superior">
-                    <h1>Portifólio</h1>
-                    <h2>Landing Page</h2>
-
-                    <h3 class="softwares-titulo">Softwares Usados</h3>
-                    <div class="tooltip">
-                        <img src="img/icon-html.webp" class="icon-software">
-                        <span class="tooltip-text">HTML</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-css.webp" class="icon-software">
-                        <span class="tooltip-text">CSS</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-js.webp" class="icon-software">
-                        <span class="tooltip-text">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="direita-metade-inferior">
-                    <p>Usei esse portifólio para reforçar varios de meus
-                        conhecimentos. Landing page feita totalmente com HTML, CSS e Javascript.
-                    </p>
-                </div>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://github.com/cristiansandri/cristiansandri.github.io', '_blank')">
-
-                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="calc-jur-comp">
-        <div class="popup-caixa">
-            <div class="popup-esquerda">
-                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
-                <div class="popup-carrossel-track-container">
-                    <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-jur-comp_1.webp"
-                                alt="Exercício de Programação"></li>
-                    </ul>
-                </div>
-                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
-            </div>
-
-            <div class="popup-direita">
-                <button class="close-modal" type="button">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="direita-metade-superior">
-                    <h1>Calc. Juros Compostos</h1>
-                    <h2>Prática de Lógica de Programação</h2>
-
-                    <h3 class="softwares-titulo">Softwares Usados</h3>
-                    <div class="tooltip">
-                        <img src="img/icon-html.webp" class="icon-software">
-                        <span class="tooltip-text">HTML</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-css.webp" class="icon-software">
-                        <span class="tooltip-text">CSS</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-js.webp" class="icon-software">
-                        <span class="tooltip-text">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="direita-metade-inferior">
-                    <p>Calculadora financeira desenvolvida para análise de contratos bancários.<br><br>
-                        O foco técnico deste projeto foi a implementação de fórmulas matemáticas em JavaScript para
-                        garantir a precisão da capitalização ao longo do tempo.<br><br>
-                        O projeto utiliza manipulação de DOM para entrega de resultados em tempo real, facilitando a
-                        simulação de diferentes cenários financeiros.<br><br>
-                    </p>
-                </div>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://cristiansandri.github.io/Calc-Juros-Compostos/', '_blank')">
-
-                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://github.com/cristiansandri/Calc-Juros-Compostos', '_blank')">
-
-                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="calc-comp-renda">
-        <div class="popup-caixa">
-            <div class="popup-esquerda">
-                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
-                <div class="popup-carrossel-track-container">
-                    <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-comp-ren_1.webp"
-                                alt="Exercício de Programação"></li>
-                    </ul>
-                </div>
-                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
-            </div>
-
-            <div class="popup-direita">
-                <button class="close-modal" type="button">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="direita-metade-superior">
-                    <h1>Calc. Compromet. de Renda</h1>
-                    <h2>Prática de Lógica de Programação</h2>
-
-                    <h3 class="softwares-titulo">Softwares Usados</h3>
-                    <div class="tooltip">
-                        <img src="img/icon-html.webp" class="icon-software">
-                        <span class="tooltip-text">HTML</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-css.webp" class="icon-software">
-                        <span class="tooltip-text">CSS</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-js.webp" class="icon-software">
-                        <span class="tooltip-text">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="direita-metade-inferior">
-                    <p>Sistema de cálculo baseado na Lei do Superendividamento.<br><br>
-                        A lógica foi estruturada para analisar a margem de subsistência do usuário, calculando
-                        automaticamente a porcentagem da renda comprometida com dívidas bancárias.<br><br>
-                        Tecnicamente, o desafio foi criar um formulário dinâmico que valida diferentes tipos de
-                        despesas, garantindo que o resultado final esteja em total conformidade com os parâmetros legais
-                        vigentes.<br><br>
-                    </p>
-                </div>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://cristiansandri.github.io/Calc-Compromet-Renda/', '_blank')">
-
-                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://github.com/cristiansandri/Calc-Compromet-Renda', '_blank')">
-
-                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="calc-jur-abs">
-        <div class="popup-caixa">
-            <div class="popup-esquerda">
-                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
-                <div class="popup-carrossel-track-container">
-                    <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-comp-abus_1.webp"
-                                alt="Exercício de Programação"></li>
-                    </ul>
-                </div>
-                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
-            </div>
-
-            <div class="popup-direita">
-                <button class="close-modal" type="button">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="direita-metade-superior">
-                    <h1>Calc. de Juros Abusivos</h1>
-                    <h2>Prática de Lógica de Programação</h2>
-
-                    <h3 class="softwares-titulo">Softwares Usados</h3>
-                    <div class="tooltip">
-                        <img src="img/icon-html.webp" class="icon-software">
-                        <span class="tooltip-text">HTML</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-css.webp" class="icon-software">
-                        <span class="tooltip-text">CSS</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-js.webp" class="icon-software">
-                        <span class="tooltip-text">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="direita-metade-inferior">
-                    <p>Ferramenta técnica para identificação de irregularidades em contratos de financiamento.<br><br>
-                        Desenvolvido com HTML5, CSS3 e JS puro, o sistema processa os dados inseridos e gera um feedback
-                        visual imediato sobre a viabilidade de uma ação revisional.
-                    </p>
-                </div>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://cristiansandri.github.io/Calc.-Juros-Abusivos', '_blank')">
-
-                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://github.com/cristiansandri/Calc.-Juros-Abusivos', '_blank')">
-
-                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="calc-red-div">
-        <div class="popup-caixa">
-            <div class="popup-esquerda">
-                <button class="btn-popup antes"><img src="./img/btn-esq.webp"></button>
-                <div class="popup-carrossel-track-container">
-                    <ul class="popup-carrossel-track">
-                        <li class="popup-carrossel-slide"><img src="projetos/Proj-calc-red-div_1.webp"
-                                alt="Exercício de Programação"></li>
-                    </ul>
-                </div>
-                <button class="btn-popup prox"><img src="./img/btn-dir.webp"></button>
-            </div>
-
-            <div class="popup-direita">
-                <button class="close-modal" type="button">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <div class="direita-metade-superior">
-                    <h1>Calc. de Redução de Dívidas</h1>
-                    <h2>Prática de Lógica de Programação</h2>
-
-                    <h3 class="softwares-titulo">Softwares Usados</h3>
-                    <div class="tooltip">
-                        <img src="img/icon-html.webp" class="icon-software">
-                        <span class="tooltip-text">HTML</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-css.webp" class="icon-software">
-                        <span class="tooltip-text">CSS</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <img src="img/icon-js.webp" class="icon-software">
-                        <span class="tooltip-text">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="direita-metade-inferior">
-                    <p>Projeto feito para implementar em um site de um escritório de
-                        direito. <br> <br>
-                        Calcula quantos % de uma dívida está acima do limite estipuado pelo BACEN e o quanto dela pode
-                        ser reduzido através de uma Ação de Revisão Contratual.
-                    </p>
-                </div>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://cristiansandri.github.io/Calc-Reducao-Dividas/', '_blank')">
-
-                    <h4>Ver Ferramenta <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-                <button class="btn-acessar" type="button"
-                    onclick="window.open('https://github.com/cristiansandri/Calc-Reducao-Dividas', '_blank')">
-
-                    <h4>Ver código <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
-                </button>
-            </div>
-        </div>
-    </dialog>
 
 
     <!-- Formulário de contato, colocar contatos -->
